@@ -1,0 +1,17 @@
+
+(library
+ (name hashlife)
+ (modules hashlife))
+
+(library
+ (name rle)
+ (modules rle)
+ (libraries hashlife))
+
+(ocamllex
+ (modules rle))
+
+(executable
+ (name gol)
+ (modules display gol)
+ (libraries graphics rle hashlife))
